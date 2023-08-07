@@ -30,3 +30,5 @@ function App() {
 }
 
 export default App;
+
+// Server url: https://gift-traders.onrender.com/
