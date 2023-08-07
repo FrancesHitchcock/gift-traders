@@ -11,7 +11,7 @@ const giftSchema = new Schema({
   img_url: String,
   description: String,
   excellentCondition: Boolean,
-  donation: number,
+  donation: Number,
 });
 
 const Gift = moongoose.model("Gift", giftSchema);
