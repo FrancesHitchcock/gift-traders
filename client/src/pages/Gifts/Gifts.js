@@ -91,7 +91,7 @@ export default function Gifts() {
   return (
     <main>
       <div className="container gifts-container">
-        <h2>I am the gifts page</h2>
+        <h2>Click on a gift to find out more about it!</h2>
         {giftsMarkup}
       </div>
     </main>
