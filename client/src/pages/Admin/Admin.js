@@ -1,6 +1,7 @@
 import "./Admin.css";
 
 import AdminGift from "../../components/AdminGift/AdminGift";
+import AddGiftForm from "../../components/AddGiftForm/AddGiftForm";
 
 export default function Admin() {
   return (
@@ -10,6 +11,7 @@ export default function Admin() {
         <AdminGift />
         <AdminGift />
         <AdminGift />
+        <AddGiftForm />
       </div>
     </main>
   );
