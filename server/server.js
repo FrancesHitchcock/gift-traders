@@ -8,6 +8,8 @@ const app = express();
 app.use(cors());
 app.use(bp.json());
 
+const Gift = require("./models/Gifts");
+
 app.get("/", (request, response) => {
   response.status(200).json("this is the root route");
 });
