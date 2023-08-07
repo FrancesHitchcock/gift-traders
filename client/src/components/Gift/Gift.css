@@ -5,13 +5,15 @@
   margin-bottom: 1em;
 }
 
-img {
+img.gift-image {
+  display: block;
+  margin: 0;
   height: 300px;
   width: 300px;
   object-fit: cover;
 }
 
-h3 {
+h3.gift-name {
   font-size: 1.125rem;
   font-weight: bold;
   margin: 0.75em 0;
