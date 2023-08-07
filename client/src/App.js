@@ -1,6 +1,8 @@
 import "./reset.css";
 import "./App.css";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import About from "./pages/About/About";
@@ -11,15 +13,19 @@ import Admin from "./pages/Admin/Admin";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Home />
-      <About />
-      <Gifts />
-      <GiftById />
-      <Admin />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/gifts" element={<Gifts />} />
+          <Route path="/gift/:id" element={<GiftById />} />
+          <Route path="/admin" element={<Admin />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
