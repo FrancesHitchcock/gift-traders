@@ -14,6 +14,6 @@ const giftSchema = new Schema({
   donation: Number,
 });
 
-const Gift = moongoose.model("Gift", giftSchema);
+const Gift = mongoose.model("Gift", giftSchema);
 
 module.exports.Gift;
