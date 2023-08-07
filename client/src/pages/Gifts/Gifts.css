@@ -1,7 +1,25 @@
+form.filter-form {
+  margin: 1em 0 3em;
+  border: 1px solid red;
+}
+
+select.filter-select {
+  width: 150px;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
 .gifts-container {
   border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+h2.gifts-h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
