@@ -98,7 +98,6 @@ import Admin from "./pages/Admin/Admin";
 // ];
 
 function App() {
-  // const [gifts, setGifts] = useState(data);
   const [gifts, setGifts] = useState([]);
 
   useEffect(() => {
