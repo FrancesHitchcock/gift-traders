@@ -7,7 +7,7 @@ async function seed() {
   await Gift.create({
     userName: "Frances",
     address: "123 Fake Street",
-    location: "Ipswich",
+    location: "Halesworth",
     type: "electrical",
     giftName: "kettle",
     img_url:
@@ -45,28 +45,28 @@ async function seed() {
 
   await Gift.create({
     userName: "Jezz",
-    address: "Fuel Studios",
-    location: "Norwich",
+    address: "1 Cloud Street",
+    location: "Fakenham",
     type: "electrical",
     giftName: "hair dryer",
     img_url:
       "https://images.unsplash.com/photo-1522338140262-f46f5913618a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGFpciUyMGRyeWVyfGVufDB8fDB8fHwy&auto=format&fit=crop&w=500&q=60",
     description: "Excellent condition. Includes attachments.",
     excellentCondition: false,
-    donation: 30.5,
+    donation: 10,
   });
 
   await Gift.create({
     userName: "Rich",
-    address: "",
-    location: "",
+    address: "27 Duck Bill Lane",
+    location: "Lowestoft",
     type: "clothing",
     giftName: "T-shirt",
     img_url:
       "https://images.unsplash.com/photo-1633966887768-64f9a867bdba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRzaGlydHxlbnwwfHwwfHx8Mg%3D%3D&auto=format&fit=crop&w=500&q=60",
     description: "Adults size large, blue. ",
     excellentCondition: true,
-    donation: 3.25,
+    donation: 3.5,
   });
 
   await Gift.create({
@@ -79,15 +79,15 @@ async function seed() {
       "https://images.unsplash.com/photo-1593548366595-c449f72ccb3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJsdWUlMjBzaG9lc3xlbnwwfHwwfHx8Mg%3D%3D&auto=format&fit=crop&w=500&q=60",
     description: "Children's shoes size 3. Blue. Good condition.",
     excellentCondition: false,
-    donation: 12.5,
+    donation: 9.5,
   });
 
   await Gift.create({
     userName: "Sam",
     address: "10 Penny Lane",
     location: "Liverpool",
-    type: "iron",
-    giftName: "an iron",
+    type: "electrical",
+    giftName: "iron",
     img_url:
       "https://images.unsplash.com/photo-1489274495757-95c7c837b101?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=715&q=80",
     description: "Used a handleful of times. In working order.",
