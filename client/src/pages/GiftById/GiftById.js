@@ -5,53 +5,55 @@ import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function GiftById({ gifts }) {
-  const [targetGift, setTargetGift] = useState();
-  const [mapUrl, setMapUrl] = useState("");
-  const [giftReserved, setGiftReserved] = useState(false);
+export default function GiftById({
+  getTargetGift,
+  targetGift,
+  clearAll,
+  giftReserved,
+  mapUrl,
+  handleDelete,
+}) {
+  // const [targetGift, setTargetGift] = useState();
+  // const [mapUrl, setMapUrl] = useState("");
+  // const [giftReserved, setGiftReserved] = useState(false);
 
   const paramsId = useParams().id;
 
   useEffect(() => {
-    getTargetGift();
+    getTargetGift(paramsId);
   }, []);
 
-  function handleMap(locationData) {
-    const url = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_API_KEY}&center=${locationData.lat},${locationData.lon}&zoom=10`;
+  // function handleMap(locationData) {
+  //   const url = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_API_KEY}&center=${locationData.lat},${locationData.lon}&zoom=10`;
 
-    setMapUrl(url);
-  }
+  //   setMapUrl(url);
+  // }
 
-  async function getTargetGift() {
-    const res = await axios.get(`http://localhost:8080/gifts/${paramsId}`);
-    setTargetGift(res.data[0]);
-    getLocation(res.data[0].location);
-  }
+  // async function getTargetGift() {
+  //   const res = await axios.get(`http://localhost:8080/gifts/${paramsId}`);
+  //   setTargetGift(res.data[0]);
+  //   getLocation(res.data[0].location);
+  // }
 
-  async function handleDelete(id) {
-    const res = axios.delete(`http://localhost:8080/gifts/${id}`);
-    // setTargetGift();
-    setGiftReserved(true);
-  }
+  // async function handleDelete(id) {
+  //   const res = axios.delete(`http://localhost:8080/gifts/${id}`);
+  //   // setTargetGift();
+  //   setGiftReserved(true);
+  // }
 
-  async function getLocation(city) {
-    // console.log(city);
-    const api = `https://eu1.locationiq.com/v1/search?key=${process.env.REACT_APP_API_KEY}&q=${city}&format=json`;
+  // async function getLocation(city) {
+  //   const api = `https://eu1.locationiq.com/v1/search?key=${process.env.REACT_APP_API_KEY}&q=${city}&format=json`;
 
-    const response = await axios.get(api);
+  //   const response = await axios.get(api);
+  //   const locationData = response.data[0];
+  //   handleMap(locationData);
+  // }
 
-    const locationData = response.data[0];
-    // console.log(locationData.lat);
-    // console.log(locationData.lon);
-
-    handleMap(locationData);
-  }
-
-  function clearAll() {
-    setTargetGift();
-    setGiftReserved(false);
-    setMapUrl("");
-  }
+  // function clearAll() {
+  //   setTargetGift();
+  //   setGiftReserved(false);
+  //   setMapUrl("");
+  // }
 
   return (
     <main>
