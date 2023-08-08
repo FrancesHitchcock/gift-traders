@@ -1,0 +1,37 @@
+.gift-container,
+.admin-container {
+  width: 300px;
+  border: 1px solid red;
+  background-color: cyan;
+  margin-bottom: 1em;
+}
+
+img.gift-image {
+  display: block;
+  margin: 0;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+h3.gift-name {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: 0.1e 0 0.75em 0;
+}
+
+p.gift-type {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.75em;
+}
+
+.gift-edit {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.5em;
+}
+
+.delete-gift {
+  padding: 0 1em;
+}
