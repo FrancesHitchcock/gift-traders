@@ -1,4 +1,5 @@
 import "./AddGiftForm.css";
+import axios from "axios";
 
 import { useState } from "react";
 
@@ -7,10 +8,12 @@ export default function AddGiftForm() {
     userName: "",
     address: "",
     location: "",
-    type: "",
+    type: "misc",
     giftName: "",
     img_url: "",
     description: "",
+    excellentCondition: false,
+    donation: 1,
   });
 
   function handleChange(event) {
@@ -24,15 +27,22 @@ export default function AddGiftForm() {
     console.log(formData);
   }
 
+  async function handleSubmit(e) {
+    e.preventDefault();
+    console.log(formData);
+    const res = await axios.post("http://localhost:8080/gifts", formData);
+  }
+
   return (
     <div className="add-gift-form-container">
-      <form className="add-gift-form">
+      <form className="add-gift-form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Your name"
           onChange={handleChange}
           name="userName"
           value={FormData.userName}
+          required
         />
         <input
           type="text"
@@ -40,6 +50,7 @@ export default function AddGiftForm() {
           onChange={handleChange}
           name="address"
           value={FormData.address}
+          required
         />
         <input
           type="text"
@@ -47,10 +58,14 @@ export default function AddGiftForm() {
           onChange={handleChange}
           name="location"
           value={FormData.location}
+          required
         />
         <label>
           Department:
           <select onChange={handleChange} name="type" value={FormData.type}>
+            <option value="misc" selected>
+              Miscellaneous
+            </option>
             <option value="electrical">Electrical</option>
             <option value="clothing">Clothing</option>
             <option value="books">Books</option>
@@ -62,6 +77,7 @@ export default function AddGiftForm() {
           onChange={handleChange}
           name="giftName"
           value={FormData.giftName}
+          required
         />
         <input
           type="text"
@@ -75,7 +91,30 @@ export default function AddGiftForm() {
           onChange={handleChange}
           name="description"
           value={FormData.description}
+          required
         />
+        <label>
+          <input
+            type="checkbox"
+            onChange={handleChange}
+            name="excellentCondition"
+            checked={formData.excellentCondition}
+          />
+          Tick if excellent condition{" "}
+        </label>
+        <label>
+          Suggested Donation:
+          <input
+            type="number"
+            step="0.5"
+            min="1"
+            max="10"
+            onChange={handleChange}
+            name="donation"
+            value={formData.donation}
+          />
+        </label>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
