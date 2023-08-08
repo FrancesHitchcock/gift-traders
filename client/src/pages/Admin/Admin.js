@@ -1,17 +1,21 @@
 import "./Admin.css";
 
 import AdminGift from "../../components/AdminGift/AdminGift";
-import AddGiftForm from "../../components/AddGiftForm/AddGiftForm";
+// import AddGiftForm from "../../components/AddGiftForm/AddGiftForm";
 
-export default function Admin() {
+export default function Admin({ gifts }) {
+  const adminGiftMarkUp = gifts.map((gift) => {
+    return <AdminGift key={gift._id} gift={gift} />;
+  });
   return (
     <main>
       <div className="container admin-container">
-        <h2>I am the admin page</h2>
+        {adminGiftMarkUp}
+        {/* <h2>I am the admin page</h2>
         <AdminGift />
         <AdminGift />
         <AdminGift />
-        <AddGiftForm />
+        <AddGiftForm /> */}
       </div>
     </main>
   );

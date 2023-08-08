@@ -118,7 +118,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/gifts" element={<Gifts gifts={gifts} />} />
           <Route path="/gift/:id" element={<GiftById gifts={gifts} />} />
-          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin" element={<Admin gifts={gifts} />} />
         </Routes>
         <Footer />
       </div>
