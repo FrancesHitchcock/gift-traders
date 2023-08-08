@@ -3,6 +3,7 @@ import axios from "axios";
 
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function GiftById({ gifts }) {
   const [targetGift, setTargetGift] = useState();
@@ -49,11 +50,12 @@ export default function GiftById({ gifts }) {
   function clearAll() {
     setTargetGift();
     setGiftReserved(false);
+    setMapUrl("");
   }
 
   return (
     <main>
-      {targetGift && (
+      {targetGift && !giftReserved && (
         <div className="container gift-by-id-container">
           <h2 className="selected-gift-h2">Gift: {targetGift.giftName}</h2>
           <h3>Department: {targetGift.type}</h3>
@@ -75,7 +77,9 @@ export default function GiftById({ gifts }) {
             your gift from {targetGift.address}, {targetGift.location}
           </h3>
           <img src={mapUrl} alt="map" />
-          <button onClick={clearAll}>OK</button>
+          <Link to={"/"}>
+            <button onClick={clearAll}>OK</button>
+          </Link>
         </div>
       )}
     </main>

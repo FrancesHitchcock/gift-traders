@@ -63,9 +63,7 @@ export default function AddGiftForm() {
         <label>
           Department:
           <select onChange={handleChange} name="type" value={FormData.type}>
-            <option value="misc" selected>
-              Miscellaneous
-            </option>
+            <option value="misc">Miscellaneous</option>
             <option value="electrical">Electrical</option>
             <option value="clothing">Clothing</option>
             <option value="books">Books</option>
