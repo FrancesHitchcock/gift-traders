@@ -45,6 +45,7 @@ export default function AddGiftForm() {
 
   return (
     <div className="add-gift-form-container">
+      <h3>Fill out the form to donate an item!</h3>
       <form className="add-gift-form" onSubmit={handleSubmit}>
         <input
           type="text"

@@ -11,7 +11,10 @@ header img {
 }
 
 h1 {
-  color: #e9eceb;
+  color: #222823;
+  font-size: 2em;
+  padding-bottom: 0.5em;
+  font-style: italic;
 }
 
 nav {

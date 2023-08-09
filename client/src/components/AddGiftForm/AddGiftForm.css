@@ -1,7 +1,19 @@
 .add-gift-form {
   max-width: 500px;
-  margin: 2em auto;
+  margin: 1em auto 2em auto;
   display: flex;
   flex-direction: column;
   gap: 1em;
+}
+
+.add-gift-form input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.add-gift-form-container h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 0.5em;
 }
