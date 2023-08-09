@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .App {
@@ -25,7 +26,7 @@ footer {
 }
 
 main {
-  background-color: aquamarine;
+  background-color: #dcf0e9;
   flex-grow: 1;
   padding: 2em 0;
 }
@@ -34,4 +35,27 @@ main {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: #aa4465;
+  color: white;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  font-family: inherit;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 5px;
+  outline: none;
+  border: none;
 }

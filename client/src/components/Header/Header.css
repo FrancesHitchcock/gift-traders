@@ -1,0 +1,49 @@
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: #387d7a;
+  font-family: "Poppins", sans-serif;
+}
+
+header img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #e9eceb;
+}
+
+nav {
+  padding: 0.5em;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+header li {
+  list-style: none;
+}
+
+header a {
+  color: #e9eceb;
+}
+
+header a:visited {
+  color: #c4dad3;
+}
+
+header a:hover {
+  color: #84b4a1;
+}
+
+.admin-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em;
+}
