@@ -1,0 +1,22 @@
+.home-container h2 {
+  color: #aa4465;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.home-container p {
+  padding: 0.4em;
+  font-size: 1.4em;
+}
+
+.home-info {
+  padding: 0.5em;
+}
+
+.home-info p {
+  font-size: 1em;
+}
+
+.home-container img {
+  padding: 0.5em;
+}
