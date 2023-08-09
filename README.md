@@ -33,7 +33,7 @@ They would like an administrators page where the site administrators can log in 
 
 1.
 
-**As a user, I want to have a page that renders all the products. I want to be able to filter products by category or name.**
+**As a user, I want to have a page that renders all the products. I want to be able to filter products by category**
 
 1.
 
@@ -41,7 +41,7 @@ They would like an administrators page where the site administrators can log in 
 
 1.
 
-**As a user, I want to learn more about the company and it’s directors.**
+**As a user, I want to learn more about the company**
 
 1.
 
@@ -50,6 +50,10 @@ They would like an administrators page where the site administrators can log in 
 1.
 
 **As a user, I want to be able to claim an item. I would like a confirmation that I can collect the item with a collection address.**
+
+1.
+
+**As a user who is administrator, I want to be able to edit or delete an item from an admin page.**
 
 1.
 

@@ -57,11 +57,26 @@ export default function GiftById({
 
   return (
     <main>
+      <Link to={"/gifts"}>
+        <button>Back to Gifts</button>
+      </Link>
       {targetGift && !giftReserved && (
         <div className="container gift-by-id-container">
           <h2 className="selected-gift-h2">Gift: {targetGift.giftName}</h2>
           <h3>Department: {targetGift.type}</h3>
-          <img src={targetGift.img_url} alt={targetGift.giftName} />
+          {targetGift.excellentCondition && (
+            <p
+              className="target-gift-excellent-condition-p"
+              style={{ color: "red", fontWeight: "bold" }}
+            >
+              Excellent Condition!
+            </p>
+          )}
+          {targetGift.img_url ? (
+            <img src={targetGift.img_url} alt={targetGift.giftName} />
+          ) : (
+            <p className="target-gift-no-photo-p">Photo not available</p>
+          )}
           <p>{targetGift.description}</p>
           <h3>Suggested donation: £{targetGift.donation.toFixed(2)}</h3>
           <h3>
@@ -79,7 +94,7 @@ export default function GiftById({
             your gift from {targetGift.address}, {targetGift.location}
           </h3>
           <img src={mapUrl} alt="map" />
-          <Link to={"/"}>
+          <Link to={"/gifts"}>
             <button onClick={clearAll}>OK</button>
           </Link>
         </div>

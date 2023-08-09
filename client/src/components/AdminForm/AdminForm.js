@@ -3,18 +3,19 @@ import axios from "axios";
 
 import { useState } from "react";
 
-export default function AddGiftForm({ closeModal }) {
+export default function AddGiftForm({ closeModal, gift }) {
   const [formData, setFormData] = useState({
-    userName: "",
-    address: "",
-    location: "",
-    type: "misc",
-    giftName: "",
-    img_url: "",
-    description: "",
-    excellentCondition: false,
-    donation: 1,
+    userName: gift.userName,
+    address: gift.address,
+    location: gift.location,
+    type: gift.type,
+    giftName: gift.giftName,
+    img_url: gift.img_url,
+    description: gift.description,
+    excellentCondition: gift.excellentCondition,
+    donation: gift.donation,
   });
+  console.log(formData);
 
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
@@ -38,7 +39,7 @@ export default function AddGiftForm({ closeModal }) {
       <form className="add-gift-form" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Your name"
+          // placeholder="Your name"
           onChange={handleChange}
           name="userName"
           value={FormData.userName}
@@ -46,7 +47,7 @@ export default function AddGiftForm({ closeModal }) {
         />
         <input
           type="text"
-          placeholder="Your address"
+          // placeholder="Your address"
           onChange={handleChange}
           name="address"
           value={FormData.address}
@@ -54,7 +55,7 @@ export default function AddGiftForm({ closeModal }) {
         />
         <input
           type="text"
-          placeholder="Your town or city"
+          // placeholder="Your town or city"
           onChange={handleChange}
           name="location"
           value={FormData.location}
@@ -63,9 +64,7 @@ export default function AddGiftForm({ closeModal }) {
         <label>
           Department:
           <select onChange={handleChange} name="type" value={FormData.type}>
-            <option value="misc" selected>
-              Miscellaneous
-            </option>
+            <option value="misc">Miscellaneous</option>
             <option value="electrical">Electrical</option>
             <option value="clothing">Clothing</option>
             <option value="books">Books</option>
@@ -73,7 +72,7 @@ export default function AddGiftForm({ closeModal }) {
         </label>
         <input
           type="text"
-          placeholder="Gift name"
+          // placeholder="Gift name"
           onChange={handleChange}
           name="giftName"
           value={FormData.giftName}
@@ -81,13 +80,13 @@ export default function AddGiftForm({ closeModal }) {
         />
         <input
           type="text"
-          placeholder="image url"
+          // placeholder="image url"
           onChange={handleChange}
           name="img_url"
           value={FormData.img_url}
         />
         <textarea
-          placeholder="brief description of gift"
+          // placeholder="brief description of gift"
           onChange={handleChange}
           name="description"
           value={FormData.description}

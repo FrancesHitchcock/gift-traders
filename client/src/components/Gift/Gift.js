@@ -7,17 +7,35 @@ export default function Gift({ gift }) {
     <Link to={`/gift/${gift._id}`}>
       <div className="gift-container">
         <h3 className="gift-name">
-          Gift: {gift.giftName[0].toUpperCase() + gift.giftName.slice(1)}
+          Gift:{" "}
+          {gift.giftName[0].toUpperCase() +
+            gift.giftName.slice(1).toLowerCase()}
         </h3>
         <p className="gift-type">
-          Department: {gift.type[0].toUpperCase() + gift.type.slice(1)}
+          Department:{" "}
+          {gift.type[0].toUpperCase() + gift.type.slice(1).toLowerCase()}
         </p>
+        {gift.excellentCondition && (
+          <p
+            className="excellent-condition-p"
+            style={{ color: "red", fontWeight: "bold" }}
+          >
+            Excellent Condition!
+          </p>
+        )}
         <div className="gift-image-container">
-          <img
-            className="gift-image"
-            src={gift.img_url}
-            alt={gift.giftName[0].toUpperCase() + gift.giftName.slice(1)}
-          />
+          {gift.img_url ? (
+            <img
+              className="gift-image"
+              src={gift.img_url}
+              alt={
+                gift.giftName[0].toUpperCase() +
+                gift.giftName.slice(1).toLowerCase()
+              }
+            />
+          ) : (
+            <p className="no-photo-p">Photo not available</p>
+          )}
         </div>
       </div>
     </Link>
