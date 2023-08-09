@@ -45,7 +45,7 @@ export default function AdminGift({ gift }) {
           alt={gift.giftName[0].toUpperCase() + gift.giftName.slice(1)}
         />
       </div>
-      {modal && <AdminForm closeModal={closeModal} />}
+      {modal && <AdminForm closeModal={closeModal} gift={gift} />}
     </div>
   );
 }
