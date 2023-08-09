@@ -31,7 +31,10 @@ export default function AddGiftForm({ closeModal, gift }) {
   async function handleSubmit(e) {
     e.preventDefault();
     console.log(formData);
-    const res = await axios.post("http://localhost:8080/gifts", formData);
+    const res = await axios.put(
+      `http://localhost:8080/gifts/${gift._id}`,
+      formData
+    );
   }
 
   return (
