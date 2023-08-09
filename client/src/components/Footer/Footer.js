@@ -4,7 +4,10 @@ export default function Footer() {
   return (
     <footer>
       <div className="container footer-container">
-        <h1>I am the footer component</h1>
+        <p>&#169; 2023 GiftTraders </p>
+        <p>
+          <a href="#">terms and conditions</a>
+        </p>
       </div>
     </footer>
   );
