@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
+  color: #222823;
 }
 
 .App {
@@ -58,4 +59,21 @@ button {
   border-radius: 5px;
   outline: none;
   border: none;
+}
+
+img.gift-image {
+  display: block;
+  margin: 0;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.gift-container,
+.admin-container {
+  width: 300px;
+  background-color: #bddbd0;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  padding-top: 0.5em;
 }

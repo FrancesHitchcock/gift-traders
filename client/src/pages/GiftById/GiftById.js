@@ -12,6 +12,7 @@ export default function GiftById({
   giftReserved,
   mapUrl,
   handleDelete,
+  mapAvailable,
 }) {
   // const [targetGift, setTargetGift] = useState();
   // const [mapUrl, setMapUrl] = useState("");
@@ -93,7 +94,13 @@ export default function GiftById({
             Thank you for reserving the {targetGift.giftName}. Please pick up
             your gift from {targetGift.address}, {targetGift.location}
           </h3>
-          <img src={mapUrl} alt="map" />
+          {mapAvailable ? (
+            <img src={mapUrl} alt="map" />
+          ) : (
+            <p className="map-unavailable-p">
+              Map not available for this location.
+            </p>
+          )}
           <Link to={"/gifts"}>
             <button onClick={clearAll}>OK</button>
           </Link>

@@ -1,6 +1,5 @@
 form.filter-form {
   margin: 1em 0 3em;
-  border: 1px solid red;
 }
 
 select.filter-select {
@@ -9,10 +8,16 @@ select.filter-select {
   border-radius: 5px;
   border: none;
   outline: none;
+  border-radius: 5px;
+  background-color: #edbfb7;
+  color: #222823;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 1rem;
+  box-shadow: inset 1px 1px 5px gray, inset -1px -1px 5px white;
 }
 
 .gifts-container {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,6 +25,8 @@ select.filter-select {
 }
 
 h2.gifts-h2 {
-  font-size: 1.5rem;
+  color: #aa4465;
+  font-size: 1.5em;
   font-weight: bold;
+  padding: 0.5em;
 }

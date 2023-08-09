@@ -11,7 +11,6 @@ export default function Gifts({ gifts }) {
       <div className="container gifts-container">
         <h2 className="gifts-h2">Click on a gift to find out more about it!</h2>
         <form className="filter-form">
-          {/* <select onChange={(e) => handleChange(e.target.value)}> */}
           <select className="filter-select">
             <option value="">All Gifts</option>
             <option value="electrical">Electrical</option>
