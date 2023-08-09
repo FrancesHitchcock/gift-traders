@@ -42,7 +42,8 @@ export default function AddGiftForm({ closeModal, gift }) {
           // placeholder="Your name"
           onChange={handleChange}
           name="userName"
-          value={FormData.userName}
+          // value={FormData.userName}
+          value={formData.userName}
           required
         />
         <input
@@ -50,7 +51,7 @@ export default function AddGiftForm({ closeModal, gift }) {
           // placeholder="Your address"
           onChange={handleChange}
           name="address"
-          value={FormData.address}
+          value={formData.address}
           required
         />
         <input
@@ -58,12 +59,12 @@ export default function AddGiftForm({ closeModal, gift }) {
           // placeholder="Your town or city"
           onChange={handleChange}
           name="location"
-          value={FormData.location}
+          value={formData.location}
           required
         />
         <label>
           Department:
-          <select onChange={handleChange} name="type" value={FormData.type}>
+          <select onChange={handleChange} name="type" value={formData.type}>
             <option value="misc">Miscellaneous</option>
             <option value="electrical">Electrical</option>
             <option value="clothing">Clothing</option>
@@ -75,7 +76,7 @@ export default function AddGiftForm({ closeModal, gift }) {
           // placeholder="Gift name"
           onChange={handleChange}
           name="giftName"
-          value={FormData.giftName}
+          value={formData.giftName}
           required
         />
         <input
@@ -83,13 +84,13 @@ export default function AddGiftForm({ closeModal, gift }) {
           // placeholder="image url"
           onChange={handleChange}
           name="img_url"
-          value={FormData.img_url}
+          value={formData.img_url}
         />
         <textarea
           // placeholder="brief description of gift"
           onChange={handleChange}
           name="description"
-          value={FormData.description}
+          value={formData.description}
           required
         />
         <label>
