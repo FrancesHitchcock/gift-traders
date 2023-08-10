@@ -6,7 +6,7 @@ import logo2 from "../../assets/logo-gt.png";
 export default function Header() {
   return (
     <header>
-      <div className="container header-container">
+      <div className="header-container">
         <img src={logo2} alt="GiftTraders logo"></img>
         <h1>GiftTraders</h1>
         <nav>

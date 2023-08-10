@@ -3,11 +3,12 @@ header {
   flex-direction: column;
   background-color: #387d7a;
   font-family: "Poppins", sans-serif;
+  justify-content: center;
+  align-items: center;
 }
 
 header img {
   width: 200px;
-  margin: 0 auto;
 }
 
 h1 {
@@ -15,6 +16,7 @@ h1 {
   font-size: 2em;
   padding-bottom: 0.5em;
   font-style: italic;
+  font-weight: bold;
 }
 
 nav {
@@ -49,4 +51,27 @@ header a:hover {
   top: 0;
   right: 0;
   padding: 0.5em;
+}
+
+@media (min-width: 1024px) {
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    padding: 0 0.5em;
+  }
+
+  header li {
+    padding: 1em;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  header a {
+    font-size: 1.5em;
+  }
 }
