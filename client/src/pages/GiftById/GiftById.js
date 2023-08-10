@@ -41,11 +41,13 @@ export default function GiftById({
               Excellent Condition!
             </p>
           )}
-          {targetGift.img_url ? (
-            <img src={targetGift.img_url} alt={targetGift.giftName} />
-          ) : (
-            <p className="target-gift-no-photo-p">Photo not available</p>
-          )}
+          <div className="target-gift-image-container">
+            {targetGift.img_url ? (
+              <img src={targetGift.img_url} alt={targetGift.giftName} />
+            ) : (
+              <p className="target-gift-no-photo-p">Photo not available</p>
+            )}
+          </div>
           <p>{targetGift.description}</p>
           <h3>
             Suggested donation:{" "}
@@ -69,13 +71,15 @@ export default function GiftById({
             Thank you for reserving the {targetGift.giftName}. Please pick up
             your gift from {targetGift.address}, {targetGift.location}
           </h3>
-          {mapAvailable ? (
-            <img src={mapUrl} alt="map" />
-          ) : (
-            <p className="map-unavailable-p">
-              Map not available for this location.
-            </p>
-          )}
+          <div className="map-container">
+            {mapAvailable ? (
+              <img className="map-image" src={mapUrl} alt="map" />
+            ) : (
+              <p className="map-unavailable-p">
+                Map not available for this location.
+              </p>
+            )}
+          </div>
           <Link to={"/gifts"}>
             <button onClick={clearAll}>OK</button>
           </Link>

@@ -23,3 +23,19 @@ select.filter-select {
   justify-content: center;
   align-items: center;
 }
+
+.gifts-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .gifts-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 30px;
+  }
+}

@@ -18,7 +18,7 @@ export default function Gifts({ gifts }) {
             <option value="books">Books</option>
           </select>
         </form>
-        {giftsMarkup}
+        <div className="gifts-wrapper">{giftsMarkup}</div>
       </div>
     </main>
   );
