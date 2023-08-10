@@ -25,7 +25,7 @@ export default function AdminGift({ gift }) {
   }
 
   return (
-    <div className="gift-container">
+    <div className="gift-container admin-gift-container">
       <div className="gift-edit">
         <button className="edit-gift" onClick={handleModal}>
           Edit
@@ -47,7 +47,11 @@ export default function AdminGift({ gift }) {
           alt={gift.giftName[0].toUpperCase() + gift.giftName.slice(1)}
         />
       </div>
-      {modal && <AdminForm closeModal={closeModal} gift={gift} />}
+      {modal && (
+        <div className="admin-form-modal">
+          <AdminForm closeModal={closeModal} gift={gift} />
+        </div>
+      )}
     </div>
   );
 }
