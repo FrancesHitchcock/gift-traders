@@ -13,3 +13,8 @@ p.gift-type {
   font-weight: bold;
   margin-bottom: 0.75em;
 }
+
+.excellent-condition-p {
+  color: #336699;
+  font-weight: bold;
+}

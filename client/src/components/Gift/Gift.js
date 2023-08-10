@@ -18,7 +18,7 @@ export default function Gift({ gift }) {
         {gift.excellentCondition && (
           <p
             className="excellent-condition-p"
-            style={{ color: "red", fontWeight: "bold" }}
+            // style={{ color: "red", fontWeight: "bold" }}
           >
             Excellent Condition!
           </p>

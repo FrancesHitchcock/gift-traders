@@ -27,7 +27,7 @@ function App() {
 
   async function getTargetGift(paramsId) {
     const res = await axios.get(
-      `https://gift-traders.onrender.com//gifts/${paramsId}`
+      `https://gift-traders.onrender.com/gifts/${paramsId}`
     );
     setTargetGift(res.data[0]);
     getLocation(res.data[0].location);

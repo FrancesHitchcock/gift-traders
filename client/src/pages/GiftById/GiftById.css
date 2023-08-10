@@ -1,0 +1,50 @@
+.gift-by-id-container {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gift-by-id-container img {
+  width: 290px;
+  height: 290px;
+  object-fit: cover;
+}
+
+.gift-value {
+  font-weight: normal;
+}
+
+.selected-gift-h2 {
+  color: #222823;
+}
+
+.target-gift-excellent-condition-p {
+  color: #336699;
+  font-weight: bold;
+}
+
+@media (min-width: 500px) {
+  .gift-by-id-container img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 700px) {
+  .gift-by-id-container img {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gift-by-id-container img {
+    width: 800px;
+    height: 800px;
+    object-fit: cover;
+  }
+}
