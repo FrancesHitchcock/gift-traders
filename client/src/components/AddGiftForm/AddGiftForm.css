@@ -40,7 +40,6 @@ textarea {
   border-radius: 5px;
   border: 1px solid #aa4465;
   outline: none;
-  /* box-shadow: inset 1px 1px 5px gray, inset -1px -1px 5px white; */
 }
 
 input[type="checkbox"] {

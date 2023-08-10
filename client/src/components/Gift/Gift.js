@@ -17,12 +17,7 @@ export default function Gift({ gift }) {
             {gift.type[0].toUpperCase() + gift.type.slice(1).toLowerCase()}
           </p>
           {gift.excellentCondition && (
-            <p
-              className="excellent-condition-p"
-              // style={{ color: "red", fontWeight: "bold" }}
-            >
-              Excellent Condition!
-            </p>
+            <p className="excellent-condition-p">Excellent Condition!</p>
           )}
         </div>
         <div className="gift-image-container">

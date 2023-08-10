@@ -35,6 +35,7 @@ export default function AddGiftForm({ closeModal, gift }) {
       `https://gift-traders.onrender.com/gifts/${gift._id}`,
       formData
     );
+    closeModal();
   }
 
   return (

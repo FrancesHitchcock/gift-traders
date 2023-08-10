@@ -1,8 +1,7 @@
 import "./GiftById.css";
-import axios from "axios";
 
 import { useParams } from "react-router";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function GiftById({
@@ -34,10 +33,7 @@ export default function GiftById({
             Department: <p className="gift-value">{targetGift.type}</p>
           </h3>
           {targetGift.excellentCondition && (
-            <p
-              className="target-gift-excellent-condition-p"
-              // style={{ color: "#aa4465", fontWeight: "bold" }}
-            >
+            <p className="target-gift-excellent-condition-p">
               Excellent Condition!
             </p>
           )}

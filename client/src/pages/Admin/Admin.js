@@ -8,7 +8,7 @@ import LogoutButton from "../../components/LogoutButton/LogoutButton";
 import AdminGift from "../../components/AdminGift/AdminGift";
 
 export default function Admin({ gifts }) {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { isAuthenticated } = useAuth0();
   const adminGiftMarkUp = gifts.map((gift) => {
     return <AdminGift key={gift._id} gift={gift} />;
   });

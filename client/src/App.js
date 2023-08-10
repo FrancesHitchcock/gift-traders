@@ -18,7 +18,6 @@ import Admin from "./pages/Admin/Admin";
 function App() {
   const [gifts, setGifts] = useState([]);
 
-  // test added from here
   const [targetGift, setTargetGift] = useState();
   const [mapUrl, setMapUrl] = useState("");
   const [giftReserved, setGiftReserved] = useState(false);
@@ -54,7 +53,6 @@ function App() {
 
   async function handleDelete(id) {
     const res = axios.delete(`https://gift-traders.onrender.com/gifts/${id}`);
-    // setTargetGift();
     setGiftReserved(true);
   }
 
@@ -107,6 +105,3 @@ function App() {
 }
 
 export default App;
-
-// Server url: https://gift-traders.onrender.com/
-// http://localhost:8080/

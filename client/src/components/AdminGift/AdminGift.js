@@ -5,10 +5,8 @@ import AdminForm from "../AdminForm/AdminForm";
 
 export default function AdminGift({ gift }) {
   const [modal, setModal] = useState(false);
-  // const [modalContent, setModalContent] = useState({});
 
   const handleDelete = async (id) => {
-    console.log(id);
     const res = await axios.delete(
       `https://gift-traders.onrender.com/gifts/${id}`
     );
@@ -17,7 +15,6 @@ export default function AdminGift({ gift }) {
 
   function handleModal() {
     setModal(true);
-    console.log(modal);
   }
 
   function closeModal() {
