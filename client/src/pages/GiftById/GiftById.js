@@ -27,12 +27,16 @@ export default function GiftById({
       </Link>
       {targetGift && !giftReserved && (
         <div className="container gift-by-id-container">
-          <h2 className="selected-gift-h2">Gift: {targetGift.giftName}</h2>
-          <h3>Department: {targetGift.type}</h3>
+          <h2 className="selected-gift-h2">
+            Gift: <span className="gift-value">{targetGift.giftName}</span>
+          </h2>
+          <h3>
+            Department: <p className="gift-value">{targetGift.type}</p>
+          </h3>
           {targetGift.excellentCondition && (
             <p
               className="target-gift-excellent-condition-p"
-              style={{ color: "red", fontWeight: "bold" }}
+              // style={{ color: "#aa4465", fontWeight: "bold" }}
             >
               Excellent Condition!
             </p>
@@ -43,9 +47,16 @@ export default function GiftById({
             <p className="target-gift-no-photo-p">Photo not available</p>
           )}
           <p>{targetGift.description}</p>
-          <h3>Suggested donation: £{targetGift.donation.toFixed(2)}</h3>
           <h3>
-            Pick-up location: {targetGift.address}, {targetGift.location}
+            Suggested donation:{" "}
+            <p className="gift-value">£{targetGift.donation.toFixed(2)}</p>
+          </h3>
+          <h3>
+            Pick-up location:
+            <p className="gift-value">
+              {" "}
+              {targetGift.address}, {targetGift.location}
+            </p>
           </h3>
           <button onClick={() => handleDelete(targetGift._id)}>
             Claim gift
