@@ -9,7 +9,9 @@ export default function AdminGift({ gift }) {
 
   const handleDelete = async (id) => {
     console.log(id);
-    const res = await axios.delete(`http://localhost:8080/gifts/${id}`);
+    const res = await axios.delete(
+      `https://gift-traders.onrender.com/gifts/${id}`
+    );
     console.log(res);
   };
 
