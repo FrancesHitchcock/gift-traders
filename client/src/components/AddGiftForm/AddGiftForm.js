@@ -49,7 +49,7 @@ export default function AddGiftForm() {
   return (
     <div className="add-gift-form-container">
       <h3>Fill out the form to donate an item!</h3>
-      <form className="add-gift-form" onSubmit={handleSubmit}>
+      <form className="add-gift-form form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Your name"
@@ -74,9 +74,14 @@ export default function AddGiftForm() {
           value={formData.location}
           required
         />
-        <label>
+        <label className="align-left">
           Department:
-          <select onChange={handleChange} name="type" value={formData.type}>
+          <select
+            className="department-select"
+            onChange={handleChange}
+            name="type"
+            value={formData.type}
+          >
             <option value="misc">Miscellaneous</option>
             <option value="electrical">Electrical</option>
             <option value="clothing">Clothing</option>
@@ -105,18 +110,20 @@ export default function AddGiftForm() {
           value={formData.description}
           required
         />
-        <label>
+        <label className="align-left">
           <input
+            className="condition-input"
             type="checkbox"
             onChange={handleChange}
             name="excellentCondition"
             checked={formData.excellentCondition}
           />
-          Tick if excellent condition{" "}
+          Tick if excellent condition
         </label>
-        <label>
+        <label className="align-left">
           Suggested Donation:
           <input
+            className="donation-input"
             type="number"
             step="0.5"
             min="1"

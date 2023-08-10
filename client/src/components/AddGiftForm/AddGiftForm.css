@@ -17,3 +17,32 @@ textarea {
   font-weight: bold;
   padding: 0.5em;
 }
+
+.department-select,
+.donation-input {
+  margin-left: 1em;
+}
+
+.condition-input {
+  margin-right: 0.5em;
+}
+
+.align-left {
+  margin-right: auto;
+}
+
+.form input,
+.form textarea,
+.form select {
+  background-color: #f7e3e0;
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  border-radius: 5px;
+  border: 1px solid #aa4465;
+  outline: none;
+  /* box-shadow: inset 1px 1px 5px gray, inset -1px -1px 5px white; */
+}
+
+input[type="checkbox"] {
+  accent-color: #f7e3e0;
+}
