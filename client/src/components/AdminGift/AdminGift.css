@@ -5,17 +5,34 @@ h3.gift-name {
 }
 
 p.gift-type {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   font-weight: bold;
   margin-bottom: 0.75em;
 }
 
 .gift-edit {
   display: flex;
-  justify-content: flex-end;
-  padding-top: 0.5em;
+  /* flex-direction: column; */
+  justify-content: center;
+  /* padding-top: 0.5em; */
 }
 
-.delete-gift {
-  padding: 0 1em;
+.gift-edit button {
+  width: 130px;
+}
+
+.gift-image-container {
+  margin-top: 1em;
+}
+
+h3.gift-name {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: 0.75em 0;
+}
+
+p.gift-type {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.75em;
 }
