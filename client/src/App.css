@@ -26,6 +26,24 @@ footer {
   background-color: bisque;
 }
 
+h2 {
+  color: #aa4465;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0.5em;
+}
+
+h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 0.5em;
+}
+
+p {
+  font-size: 1em;
+  padding: 0.5em;
+}
+
 main {
   background-color: #dcf0e9;
   flex-grow: 1;
@@ -45,6 +63,12 @@ img {
 
 a {
   text-decoration: none;
+  color: #222823;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #222823;
 }
 
 button {
@@ -70,8 +94,7 @@ img.gift-image {
   object-fit: cover;
 }
 
-.gift-container,
-.admin-container {
+.gift-container {
   width: 300px;
   background-color: #bddbd0;
   margin-bottom: 2em;
