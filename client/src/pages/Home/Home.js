@@ -1,4 +1,5 @@
 import "./Home.css";
+import { Link } from "react-router-dom";
 import AddGiftForm from "../../components/AddGiftForm/AddGiftForm";
 import donateImg from "../../assets/donate.png";
 
@@ -6,12 +7,18 @@ export default function Home() {
   return (
     <main>
       <div className="container home-container">
-        <h2>Trade Your Past, Shape Our Future</h2>
-        <p>Join Gift Traders in Redefining Generosity and Sustainability!</p>
-        <img
-          src={donateImg}
-          alt="a man holding a box of clothes that says 'donate'."
-        />
+        <div className="hero">
+          <div className="hero-text">
+            <h2>Trade Your Past, Shape Our Future</h2>
+            <p>
+              Join Gift Traders in Redefining Generosity and Sustainability!
+            </p>
+          </div>
+          <img
+            src={donateImg}
+            alt="a man holding a box of clothes that says 'donate'."
+          />
+        </div>
         <div className="home-info">
           <p>
             Gift Traders, founded by Katy and Frances, is a visionary platform
@@ -24,6 +31,9 @@ export default function Home() {
             fostering a legacy of sustainability for future generations.
           </p>
         </div>
+        <Link to={"/gifts"}>
+          <button>View Gifts</button>
+        </Link>
         <AddGiftForm />
       </div>
     </main>
