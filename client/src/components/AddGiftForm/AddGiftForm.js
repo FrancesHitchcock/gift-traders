@@ -29,7 +29,10 @@ export default function AddGiftForm() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    const res = await axios.post("http://localhost:8080/gifts", formData);
+    const res = await axios.post(
+      "https://gift-traders.onrender.com/gifts",
+      formData
+    );
     setFormData({
       userName: "",
       address: "",

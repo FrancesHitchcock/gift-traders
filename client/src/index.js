@@ -10,8 +10,7 @@ root.render(
       domain="dev-1sx3wgsck0p3okfb.us.auth0.com"
       clientId="Kw19PFfgvgOGidgeP16lHiEttxb4ta11"
       authorizationParams={{
-        // redirect_uri: window.location.origin,
-        redirect_uri: "http://localhost:3000/admin",
+        redirect_uri: "https://gift-traders.netlify.app/admin",
       }}
     >
       <App />
@@ -22,3 +21,5 @@ root.render(
 // dev-1sx3wgsck0p3okfb.us.auth0.com
 
 // Auth0 login $Frances123
+
+// http://localhost:3000/

@@ -26,7 +26,9 @@ function App() {
   const [mapAvailable, setMapAvailable] = useState(false);
 
   async function getTargetGift(paramsId) {
-    const res = await axios.get(`http://localhost:8080/gifts/${paramsId}`);
+    const res = await axios.get(
+      `https://gift-traders.onrender.com//gifts/${paramsId}`
+    );
     setTargetGift(res.data[0]);
     getLocation(res.data[0].location);
   }
@@ -51,7 +53,7 @@ function App() {
   }
 
   async function handleDelete(id) {
-    const res = axios.delete(`http://localhost:8080/gifts/${id}`);
+    const res = axios.delete(`https://gift-traders.onrender.com/gifts/${id}`);
     // setTargetGift();
     setGiftReserved(true);
   }
@@ -70,7 +72,7 @@ function App() {
   }, [giftReserved]);
 
   async function getGifts() {
-    const res = await axios.get("http://localhost:8080/gifts");
+    const res = await axios.get("https://gift-traders.onrender.com/gifts");
     setGifts(res.data);
   }
 
@@ -107,3 +109,4 @@ function App() {
 export default App;
 
 // Server url: https://gift-traders.onrender.com/
+// http://localhost:8080/

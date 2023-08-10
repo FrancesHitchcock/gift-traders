@@ -32,7 +32,7 @@ export default function AddGiftForm({ closeModal, gift }) {
     e.preventDefault();
     console.log(formData);
     const res = await axios.put(
-      `http://localhost:8080/gifts/${gift._id}`,
+      `https://gift-traders.onrender.com/gifts/${gift._id}`,
       formData
     );
   }
