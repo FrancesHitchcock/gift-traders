@@ -1,3 +1,9 @@
+.home-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .home-container h2 {
   color: #aa4465;
   font-weight: bold;
@@ -27,16 +33,15 @@
 }
 
 @media (min-width: 1024px) {
-  .container {
-    max-width: 1500px;
-    margin: 0 auto;
+  .home-container {
+    max-width: 1650px;
   }
   .hero {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin: 1em auto 1.5em auto;
+    margin: 1em auto 1.5em 3.5em;
   }
 
   .hero-text {
@@ -47,6 +52,7 @@
     max-width: 1200px;
     margin: 0 auto;
     font-size: 1.2em;
+    padding-bottom: 1em;
   }
 
   .home-container h2 {
@@ -55,5 +61,8 @@
 
   .hero p {
     font-size: 1.8em;
+  }
+  .home-container img {
+    padding-right: 0;
   }
 }

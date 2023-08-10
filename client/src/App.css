@@ -84,6 +84,15 @@ button {
   outline: none;
   border: none;
   margin: 0.75em 0.5em;
+  cursor: pointer;
+}
+
+button:hover {
+  transition: 5ms;
+}
+
+button:active {
+  transform: translateY(4px);
 }
 
 img.gift-image {
