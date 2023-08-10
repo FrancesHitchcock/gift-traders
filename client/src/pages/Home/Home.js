@@ -6,7 +6,7 @@ import donateImg from "../../assets/donate.png";
 export default function Home() {
   return (
     <main>
-      <div className="container home-container">
+      <div className="home-container">
         <div className="hero">
           <div className="hero-text">
             <h2>Trade Your Past, Shape Our Future</h2>

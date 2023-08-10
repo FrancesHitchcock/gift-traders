@@ -3,3 +3,12 @@
   max-width: 500px;
   margin: 0 auto;
 }
+
+.about-container p {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-container {
+  max-width: 1100px;
+}
