@@ -5,24 +5,26 @@ import { Link } from "react-router-dom";
 export default function Gift({ gift }) {
   return (
     <Link to={`/gift/${gift._id}`}>
-      <div className="gift-container">
-        <h3 className="gift-name">
-          Gift:{" "}
-          {gift.giftName[0].toUpperCase() +
-            gift.giftName.slice(1).toLowerCase()}
-        </h3>
-        <p className="gift-type">
-          Department:{" "}
-          {gift.type[0].toUpperCase() + gift.type.slice(1).toLowerCase()}
-        </p>
-        {gift.excellentCondition && (
-          <p
-            className="excellent-condition-p"
-            // style={{ color: "red", fontWeight: "bold" }}
-          >
-            Excellent Condition!
+      <div className="gift-container gift-container-2">
+        <div className="gift-info-container">
+          <h3 className="gift-name">
+            Gift:{" "}
+            {gift.giftName[0].toUpperCase() +
+              gift.giftName.slice(1).toLowerCase()}
+          </h3>
+          <p className="gift-type">
+            Department:{" "}
+            {gift.type[0].toUpperCase() + gift.type.slice(1).toLowerCase()}
           </p>
-        )}
+          {gift.excellentCondition && (
+            <p
+              className="excellent-condition-p"
+              // style={{ color: "red", fontWeight: "bold" }}
+            >
+              Excellent Condition!
+            </p>
+          )}
+        </div>
         <div className="gift-image-container">
           {gift.img_url ? (
             <img

@@ -6,10 +6,34 @@
   align-items: center;
 }
 
-.gift-by-id-container img {
+.map-container {
+  margin: 2em auto;
+}
+
+.target-gift-image-container,
+.map-container {
+  width: 290px;
+  height: 290px;
+  background-color: rgba(200, 200, 200, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.target-gift-no-photo-p {
+  transform: rotate(-45deg);
+}
+
+.gift-by-id-container img,
+.map-image {
   width: 290px;
   height: 290px;
   object-fit: cover;
+  border-radius: 5px;
+}
+
+.map-unavailable-p {
+  transform: rotate(-45deg);
 }
 
 .gift-value {
@@ -26,25 +50,43 @@
 }
 
 @media (min-width: 500px) {
-  .gift-by-id-container img {
+  .gift-by-id-container img,
+  .map-image {
     width: 450px;
     height: 450px;
     object-fit: cover;
   }
+  .target-gift-image-container,
+  .map-container {
+    width: 450px;
+    height: 450px;
+  }
 }
 
 @media (min-width: 700px) {
-  .gift-by-id-container img {
+  .gift-by-id-container img,
+  .map-image {
     width: 600px;
     height: 600px;
     object-fit: cover;
   }
+  .target-gift-image-container,
+  .map-container {
+    width: 600px;
+    height: 600px;
+  }
 }
 
 @media (min-width: 1024px) {
-  .gift-by-id-container img {
+  .gift-by-id-container img,
+  .map-image {
     width: 800px;
     height: 800px;
     object-fit: cover;
+  }
+  .target-gift-image-container,
+  .map-container {
+    width: 800px;
+    height: 800px;
   }
 }

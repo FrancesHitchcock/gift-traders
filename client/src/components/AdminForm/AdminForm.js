@@ -87,7 +87,7 @@ export default function AddGiftForm({ closeModal, gift }) {
           required
         />
         <input
-          type="text"
+          type="url"
           placeholder="image url"
           onChange={handleChange}
           name="img_url"
